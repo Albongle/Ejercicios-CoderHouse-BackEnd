@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/node": "^17.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "es6-promise": "^4.2.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon .",
+    "tsc": "tsc ./modules/calculador.ts ./modules/resta.ts ./modules/suma.ts ./modules/operacion.ts -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
