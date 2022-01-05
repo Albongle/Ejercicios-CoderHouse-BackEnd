@@ -14,6 +14,7 @@ const PORT = 8080;
 const productos = new contenedor("./productos.txt");
 
 
+app.get("/",(req,res)=>res.send("Api Alejandro Bongioanni"));
 
 app.route("/productos").get((req, res) => {
   productos.getAll()
@@ -32,5 +33,5 @@ app.route("/productosRandom").get((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`App abiertta en puesto ${PORT}`);
+  console.log(`App abierta en puesto ${PORT}`);
 });
