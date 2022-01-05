@@ -13,9 +13,6 @@ const app = new express();
 const PORT = 8080;
 const productos = new contenedor("./productos.txt");
 
-let datos;
-
-
 
 
 app.route("/productos").get((req, res) => {
