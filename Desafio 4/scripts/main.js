@@ -16,14 +16,16 @@ const productos = new contenedor("./productos.txt");
 
 app.get("/",(req,res)=>res.send("Api Alejandro Bongioanni"));
 
-app.route("/productos").get((req, res) => {
+app.route("/productos")
+.get((req, res) => {
   productos.getAll()
     .then((datos) => res.send(datos))
     .catch((error) => console.error(error.message));
 });
 
 
-app.route("/productosRandom").get((req, res) => {
+app.route("/productosRandom")
+.get((req, res) => {
   productos.getAll()
     .then(async (datos) =>{
         let numeroAzar = Math.floor(Math.random() * datos.length)+1;
