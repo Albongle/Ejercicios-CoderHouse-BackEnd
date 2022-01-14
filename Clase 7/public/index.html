@@ -10,9 +10,20 @@
 
     <h1>Formularios</h1>
 
-    <form action="http://localhost:3000/personas" method="POST">
+    <form action="http://localhost:3000/personas" method="POST" enctype="multipart/form-data">
         <fieldset>
-            <legend>Personas</legend>
+            <legend>Personas archivo</legend>
+            <input type="file" name="archivo">
+            <input type="submit">
+        </fieldset>
+
+    </form>
+    <br><br>
+    <hr>
+
+    <form action="http://localhost:3000/personas/carga" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personas Carga</legend>
             <input type="text" name="nombre", placeholder="Nombre" required>
             <input type="text" name="apellido", placeholder="Apellido" required>
             <input type="number" name="edad", placeholder="Edad" required>

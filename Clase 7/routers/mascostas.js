@@ -9,7 +9,7 @@ router.get("/",(req, res)=>{
 
 
 
-router.use(mdw.chekAccesRaza).post("/",(req,res)=>{
+router.post("/",mdw.chekAccesRaza,(req,res)=>{
 
     if(req.body.nombre !== undefined && req.body.raza !== undefined && req.body.edad !== undefined){
         let obj = req.body;

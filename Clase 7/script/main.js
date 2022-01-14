@@ -4,15 +4,14 @@ const PORT = 3000;
 
 const personas = require("../routers/personas.js");
 const mascotas = require("../routers/mascostas.js");
+
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use("/mascotas",mascotas);
 app.use("/personas",personas);
 
-app.use("/static",express.static("public"));
-
-
-
+app.use("/public",express.static("public"));
 
 
 
