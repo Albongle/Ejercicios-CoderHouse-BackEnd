@@ -1,17 +1,19 @@
 {
-  "name": "clase-7",
+  "name": "clase-6",
   "version": "1.0.0",
   "description": "",
-  "main": "./script/main.js",
+  "main": "./scripts/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "dev": "nodemon ."
+    "desafio1": "nodemon ./scripts/Desafio1/desafio1.js",
+    "desafio2": "nodemon ./scripts/Desafio2/desafio2.js",
+    "desafio3": "nodemon ./scripts/Desafio3/desafio3.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
-    "multer": "^1.4.4"
+    "express": "^4.17.2"
   }
 }

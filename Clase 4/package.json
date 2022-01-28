@@ -1,9 +1,8 @@
 {
-  "name": "clase-4",
+  "name": "clase-3",
   "version": "1.0.0",
   "description": "",
   "main": "./scripts/main.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
@@ -12,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "moment": "^2.29.1"
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

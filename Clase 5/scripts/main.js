@@ -1,54 +1,42 @@
-// ejercicio 1
-// import http from 'http';
+import {ejecutar} from "./calculadorEdad.js";
+const productos = [
+    { id:1, nombre:'Escuadra', precio:323.45 },
+    { id:2, nombre:'Calculadora', precio:234.56 },
+    { id:3, nombre:'Globo Terráqueo', precio:45.67 },
+    { id:4, nombre:'Paleta Pintura', precio:456.78 },
+    { id:5, nombre:'Reloj', precio:67.89 },
+    { id:6, nombre:'Agenda', precio:78.90 }
+]
 
-// const server = http.createServer((peticion, respuesta)=>{
+let nombres = productos.reduce((acum,proximo)=> acum.length===0 ? acum+=proximo.nombre :acum+=","+proximo.nombre ,"");
+console.log(nombres);
 
-//     console.log(peticion.method, peticion.url);
+let precioTotal = (productos.reduce((acum,proximo)=> acum+=proximo.precio ,0));
+console.log(precioTotal);
+let prom = (precioTotal/productos.length);
+console.log(prom);
 
-//     const hora = new Date();
-//     if(hora.getHours()>5 && hora.getHours()<12){
-//         respuesta.end(`Buenos dias, son las ${hora.toLocaleTimeString()}`);
-//     }else if(hora.getHours()>20){
-//         respuesta.end(`Buenas noches, son las ${hora.toLocaleTimeString()}`);   
-//     }
-//     else{
-//         respuesta.end(`Buenos tardes, son las ${hora.toLocaleTimeString()}`);
-//     }
-// });
 
-// const connectedServer = server.listen(8080,()=>{
-    
-//     console.log(`Servidor http escuchando en el puerto ${connectedServer.address().port}`);
+let max = productos.reduce((prev,proximo)=> proximo.precio > prev.precio ? proximo : prev);
+console.log(max);
 
-// });
+let min = productos.reduce((prev,proximo)=> proximo.precio < prev.precio ? proximo : prev);
+console.log(min);
 
- // ejercicio 2
-import express from 'express';
-let visitas = 0;
-const app = new express();
+let objeto =
+{
+    nombres: nombres,
+    precioTotal : precioTotal,
+    promedio : prom,
+    max:max,
+    min:min
+}
+console.log(objeto);
 
-app.route('/')
-.get((req,res)=>{
+console.log(`\n\n\n**********Ejecucion del ejercicio 2****************\n\n\n`)
 
-    res.send(`<h1 style="color:blue;">Bienvenidos al servidor express</h1>`);
-});
 
-app.route('/visitas')
-.get((req,res)=>{
-    visitas++;
-    res.send(`Cantidad de visitas ${visitas}`);
-});
-
-app.route('/fyh')
-.get((req,res)=>{
-    let fecha =  new Date();
-    let objeto = {fyh: `${fecha.toLocaleDateString()} ${fecha.toLocaleTimeString()} `}
-    res.send(objeto);
-});
+console.log(ejecutar());
 
 
 
-
-app.listen(8080, () => {
-    console.log("Api en el puerto 8080");
-});

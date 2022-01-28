@@ -1,25 +1,50 @@
-const array1 = [1,2,3,4];
+//#region 'Primer Ejercicio'
+function mostrarLista (lista){
+    Array.isArray(lista) && lista.length>0 ? console.log(lista):console.log("Lista Vacia");
+}
 
-console.log(array1.includes(1));
-console.log(array1.includes(1,1));
+const mostrarListaAnom = (lista)=> Array.isArray(lista) && lista.length>0 ? console.log(lista):console.log("Lista Vacia");
+
+mostrarListaAnom([]);
+
+mostrarLista([1,2,3]);
+
+const crearMultiplicador = (numero)=> (segundoNumero)=> numero*segundoNumero;
+
+const duplicar = crearMultiplicador(5);
+const triplicar= crearMultiplicador(5);
+console.log(duplicar(2));
+console.log(duplicar(3));
+//#endregion
 
 
-const objeto = {nombre:"Alejandro", apellido: "Bongioanni",edad:34};
+//#region "Segundo Ejercicio"
 
-console.log(Object.entries(objeto));
-Object.entries(objeto).forEach((value)=> console.log(value));
+class Contador{
+    static contadorClase = 0;
+    #nombre;
+    #contadorInstancia;
+    constructor(nombre){
+        this.#nombre=nombre
+        this.#contadorInstancia = 0;
+    }
 
-console.log("algo".padStart(10));
-console.log("algo".padEnd(10,123456));
+    obtenerResponsable(){
+        return this.#nombre;
+    }
+    obtenerCuentaIndividual(){
+        return this.#contadorInstancia;
+    }
+    static obtenerCuentaGlobar(){
+        return Contador.contadorClase;
+    }
+    contar (){
+        this.#contadorInstancia++;
+        Contador.contadorClase++;
+    }
+}
 
-let {a,b,...c} = {a:"Hi",b:"there", x:true,y:false};
-console.log(a);
-console.log(b);
-console.log(c);
+cont1 = new Contador("Alejandro");
+console.log(cont1.obtenerResponsable());
+//#endregion
 
-let otro = {a,b,...c};
-console.log(otro);
-
-console.log(null && "algo");
-console.log(null || "algo");
-console.log("Pedro" ?? "algo");

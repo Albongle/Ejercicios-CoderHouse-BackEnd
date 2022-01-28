@@ -1,41 +1,25 @@
-const fs = require('fs');
-// try{
-//     fs.writeFileSync("fyh.txt",new Date(Date.now()).toString(),'utf-8'); // escribo
-//     let dato= fs.readFileSync("fyh.txt","utf-8"); // leo
-//     console.log(`El archivo contiene ${dato}`);
-// }
-// catch(error){
-//     console.log(error.message);
-// }
+const array1 = [1,2,3,4];
 
-const info = {
-    contenidoStr: "contenido del archivo leído en formato string",
-    contenidoObj: "contenido del archivo leído en formato objeto",
-    size: 1000
-}
-
-try{
-    fs.readFile("./package.json","utf8",(error, dato)=>{
-        if(!error){
-            info.contenidoStr = dato;
-            info.contenidoObj = JSON.parse(dato);
-            info.size = dato.length;
-            fs.writeFile("./info.txt", JSON.stringify(info),"utf-8", error=>console.error(error));
-            // console.log(info);
-        }
-    });
-}
-catch(error){
-    console.log(error.message);
-}
+console.log(array1.includes(1));
+console.log(array1.includes(1,1));
 
 
-fs.promises.readFile("./info.txt","utf-8").then(resultado=>{
-    const infoDos = JSON.parse(resultado);
-    infoDos.contenidoObj.author = "CodherHouse";
-    console.log(infoDos.contenidoObj);
-    return fs.promises.writeFile("./package.json.coder",JSON.stringify(infoDos));
+const objeto = {nombre:"Alejandro", apellido: "Bongioanni",edad:34};
 
-})
-.then(resp => console.log("Archivo Guardado"))
-.catch(error => console.error(error));
+console.log(Object.entries(objeto));
+Object.entries(objeto).forEach((value)=> console.log(value));
+
+console.log("algo".padStart(10));
+console.log("algo".padEnd(10,123456));
+
+let {a,b,...c} = {a:"Hi",b:"there", x:true,y:false};
+console.log(a);
+console.log(b);
+console.log(c);
+
+let otro = {a,b,...c};
+console.log(otro);
+
+console.log(null && "algo");
+console.log(null || "algo");
+console.log("Pedro" ?? "algo");

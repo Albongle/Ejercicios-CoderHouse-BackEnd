@@ -1,5 +1,5 @@
 {
-  "name": "clase-5",
+  "name": "clase-4",
   "version": "1.0.0",
   "description": "",
   "main": "./scripts/main.js",
@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "moment": "^2.29.1"
   }
 }
