@@ -1,0 +1,24 @@
+{
+  "name": "clase-12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon .",
+    "tsc": "tsc -w main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "babel":{
+    "presets": ["@babel/preset-env"]
+
+
+  }
+}
