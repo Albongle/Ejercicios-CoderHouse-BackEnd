@@ -2,7 +2,7 @@ const socket = io(); // con el io cierro la conexion entre el servidor y el clie
 const message = document.querySelector("#message");
 const user = document.querySelector("#user");
 const actions = document.querySelector("#websocket-actions");
-const send = document.querySelector("#send");
+const send = document.querySelector("#sendMessage");
 const messages = document.querySelector("#websocket-messages");
 const btnCierra = document.querySelector("#btn-cierra-dialogo-chat");
 const btnAbre = document.querySelector("#btn-open-chat");
@@ -70,7 +70,7 @@ socket.on("chat:tiping", (data) => {
 
 
 socket.on("new:message",(data)=>{
-  if(socket.id === data.id){
+  if(socket.id === data.idSocket){
     messages.innerHTML+=`<p class="messages-me"><span>${data.user}:</span> ${data.message}</p>`
   }else{
     messages.innerHTML+=`<p class="messages-other"><span>${data.user}:</span> ${data.message}</p>`
@@ -81,12 +81,12 @@ socket.on("new:message",(data)=>{
 
 const eventTiping = (status)=>{
 
-  socket.emit("chat:tiping", { user: user.value, id: socket.id,status:status });
+  socket.emit("chat:tiping", { user: user.value, idSocket: socket.id,status:status });
 
 }
 const eventNewMessage = ()=>{
 
-  socket.emit("new:message", { user: user.value, id: socket.id,message:message.value});
+  socket.emit("new:message", { user: user.value, idSocket: socket.id,message:message.value});
   message.value="";
   eventTiping("notiping");
 }
