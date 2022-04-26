@@ -7,7 +7,7 @@ const esquema = {
   message:{type:String, require:true}
 }
 
-module.exports = class ChatsDAO extends GestorDbMongo{
+module.exports = class ChatsDAOMongo extends GestorDbMongo{
 
     constructor(){
         super(process.env.STRING_CONECTION,"chats",esquema);   

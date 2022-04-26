@@ -5,10 +5,10 @@ const esquema=
     strings:[{name:"productos",length:255}],
 };
 
-module.exports = class CarritoDAO extends GestorDbMySql{
+module.exports = class CarritoDAOMySql extends GestorDbMySql{
 
     constructor(){
         super();
-        this.crearTabla("carrito",)   
+        this.crearTabla("carrito",esquema);
       }
 }

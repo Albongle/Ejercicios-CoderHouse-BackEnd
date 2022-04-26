@@ -4,7 +4,7 @@ const esquema = {
   productos:{type:Array, require:true},
 }
 
-module.exports = class CarritoDAO extends GestorDbMongo{
+module.exports = class CarritoDAOMongo extends GestorDbMongo{
 
     constructor(){
         super(process.env.STRING_CONECTION,"carrito",esquema);   

@@ -5,7 +5,7 @@ const esquema=
     strings:[{name:"productos",length:255}],
 };
 
-module.exports = class CarritoDAO extends GestorDbSqLite{
+module.exports = class CarritoDAOSqlite extends GestorDbSqLite{
 
     constructor(){
         super();

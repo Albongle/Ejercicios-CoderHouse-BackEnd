@@ -11,7 +11,7 @@ const esquema=
     integers:["stock","cuotas"]
 };
 
-module.exports = class ProductosDAO extends GestorDbSqlite{
+module.exports = class ProductosDAOSqlite extends GestorDbSqlite{
 
   constructor(){
     super();

@@ -13,7 +13,7 @@ const esquema = {
   cuotas:{type:Number, require:true},
 };
 
-module.exports = class ProductosDAO extends GestorDbMongo{
+module.exports = class ProductosDAOMongo extends GestorDbMongo{
 
   constructor(){
     super(process.env.STRING_CONECTION,"productos",esquema);

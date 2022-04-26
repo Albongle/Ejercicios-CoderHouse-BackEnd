@@ -11,7 +11,7 @@ const esquema=
     integers:["stock","cuotas"]
 };
 
-module.exports = class ProductosDAO extends GestorDbMySql{
+module.exports = class ProductosDAOMySql extends GestorDbMySql{
 
   constructor(){
     super();

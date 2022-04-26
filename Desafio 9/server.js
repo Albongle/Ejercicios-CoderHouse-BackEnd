@@ -5,7 +5,6 @@ const socketIo= require("socket.io");
 const apiProducto = require("./routes/apiProducto");
 const apiCarrito = require("./routes/apiCarrito");
 const mdw = require("./middlewares/middlewares");
-const sqlite = require("./contenedores/gestorDbSqLite");
 const ChatsDAO = require("./dao/chats/chatsDAOMongoDb");
 require("dotenv").config();
 
