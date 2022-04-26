@@ -6,6 +6,7 @@ const apiProducto = require("./routes/apiProducto");
 const apiCarrito = require("./routes/apiCarrito");
 const mdw = require("./middlewares/middlewares");
 const sqlite = require("./contenedores/gestorDbSqLite");
+const ChatsDAO = require("./dao/chats/chatsDAOMongoDb");
 require("dotenv").config();
 
 
@@ -29,26 +30,26 @@ const server = app.listen(app.get("port"),()=> console.log(`App corriendo en ${a
 
 
 const io = socketIo(server);
-const columnas={strings:[{name:"idSocket",length:50},{name:"user",length:50},{name:"message", length:255}]};
 
-const gestorDbSqlite = new sqlite();
 
-gestorDbSqlite.crearTabla("chats",columnas).then(()=>{
 
-    io.on("connection",(socket)=>{
-        console.log("Usuario conectado con ID", socket.id);    
-        socket.on("chat:tiping",(data)=>{
-            socket.broadcast.emit("chat:tiping", data);
-        });
-        socket.on("new:message",async (data)=>{
-            console.log(data)
-            io.sockets.emit("new:message", data);
-            
-            gestorDbSqlite.addElementos(data)
-            .then(()=>gestorDbSqlite.getAllElementos()
-            .then(message=> console.log(message))); 
-        });
+const gestorChatsDao = new ChatsDAO();
+
+
+
+io.on("connection",(socket)=>{
+    console.log("Usuario conectado con ID", socket.id);    
+    socket.on("chat:tiping",(data)=>{
+    socket.broadcast.emit("chat:tiping", data);
     });
+    socket.on("new:message",async (data)=>{
+        console.log(data)
+        io.sockets.emit("new:message", data);
+        gestorChatsDao.addElementos(data)
+        .then(()=>gestorChatsDao.getAllElementos()
+        .then(message=> console.log(message))); 
+     });
 });
+
 
 app.io = io;

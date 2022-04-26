@@ -8,7 +8,7 @@ async function Crud()
     try
     {
         //conexion a la BD
-        const URL = `mongodb://localhost:27017/usuarios`;
+        const URL = `mongodb+srv://albongle:Ale33060327@cluster0.1mlgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
         let rta = await mongoose.connect(URL, {});
         console.log(`base de datos conectada`);
 

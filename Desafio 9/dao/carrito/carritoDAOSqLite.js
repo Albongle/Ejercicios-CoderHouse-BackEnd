@@ -9,6 +9,6 @@ module.exports = class CarritoDAO extends GestorDbSqLite{
 
     constructor(){
         super();
-        this.crearTabla("carrito",)   
+        this.crearTabla("carrito",esquema);  
       }
 }
