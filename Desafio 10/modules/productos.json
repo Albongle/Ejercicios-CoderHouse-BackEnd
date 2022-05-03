@@ -1,0 +1,233 @@
+[
+  {
+    "urlImg": "/assets/img/equipos/G60s.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "G60S",
+    "marca": "Motorola",
+    "gama": "Media",
+    "tipo": "Telefono",
+    "stock": 5,
+    "precio": 47999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/12.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "12",
+    "marca": "Apple",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 15,
+    "precio": 215999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/12ProMax.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "12ProMax",
+    "marca": "Apple",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 6,
+    "precio": 305999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/A22.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "A22",
+    "marca": "Samsung",
+    "gama": "Baja",
+    "tipo": "Telefono",
+    "stock": 10,
+    "precio": 19000,
+    "cuotas": 3
+  },
+  {
+    "urlImg": "/assets/img/equipos/A32.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "A32",
+    "marca": "Samsung",
+    "gama": "Baja",
+    "tipo": "Telefono",
+    "stock": 20,
+    "precio": 39669,
+    "cuotas": 3
+  },
+  {
+    "urlImg": "/assets/img/equipos/Buds+.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "Buds+",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "Auricular",
+    "stock": 15,
+    "precio": 15999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/E7.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "E7",
+    "marca": "Motorola",
+    "gama": "Baja",
+    "tipo": "Telefono",
+    "stock": 9,
+    "precio": 39999,
+    "cuotas": "3"
+  },
+  {
+    "urlImg": "/assets/img/equipos/Edge20.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "Edge20",
+    "marca": "Motorola",
+    "gama": "Media",
+    "tipo": "Telefono",
+    "stock": 4,
+    "precio": 139000,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/Fit2.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "Fit2",
+    "marca": "Samsung",
+    "gama": "Media",
+    "tipo": "SmartWatch",
+    "stock": 5,
+    "precio": 5999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/K41s.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "K41S",
+    "marca": "LG",
+    "gama": "Media",
+    "tipo": "Telefono",
+    "stock": 10,
+    "precio": 284999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/K42.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "K42",
+    "marca": "LG",
+    "gama": "Media",
+    "tipo": "Telefono",
+    "stock": 12,
+    "precio": 30999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/K51s.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "K51S",
+    "marca": "LG",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 15,
+    "precio": 31999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/MotoG20.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "G20",
+    "marca": "Motorola",
+    "gama": "Media",
+    "tipo": "Telefono",
+    "stock": 20,
+    "precio": 45999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/S21.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "S21",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 10,
+    "precio": 159000,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/S21Ultra.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "S21Ultra",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 8,
+    "precio": 205000,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/SonyBTH.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "SonyBTH",
+    "marca": "Sony",
+    "gama": "Baja",
+    "tipo": "Auricular",
+    "stock": 2,
+    "precio": 7299,
+    "cuotas": 3
+  },
+  {
+    "urlImg": "/assets/img/equipos/TabA7.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "TabA7",
+    "marca": "Samsung",
+    "gama": "Media",
+    "tipo": "Tablet",
+    "stock": 5,
+    "precio": 37999,
+    "cuotas": 6
+  },
+  {
+    "urlImg": "/assets/img/equipos/Velvet.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "Velvet",
+    "marca": "LG",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 6,
+    "precio": 69999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/WatchActive2.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "WatchActive2",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "SmartWatch",
+    "stock": 7,
+    "precio": 34999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/ZFlip3G.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "ZFlip3G",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 13,
+    "precio": 239999,
+    "cuotas": 12
+  },
+  {
+    "urlImg": "/assets/img/equipos/ZFold3.png",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, explicabo, facilis consequuntur doloremque, quae saepe voluptatem sapiente eius repudiandae!",
+    "nombre": "ZFold3",
+    "marca": "Samsung",
+    "gama": "Alta",
+    "tipo": "Telefono",
+    "stock": 3,
+    "precio": 259999,
+    "cuotas": 12
+  }
+]
