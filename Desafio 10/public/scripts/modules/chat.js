@@ -7,7 +7,11 @@ const messages = document.querySelector("#websocket-messages");
 const btnCierra = document.querySelector("#btn-cierra-dialogo-chat");
 const btnAbre = document.querySelector("#btn-open-chat");
 const dialogoChat = document.querySelector("#dialogo-chat");
-
+const mensaje = new normalizr.schema.Entity("mensaje");
+const autor = new normalizr.schema.Entity("autor",{mensaje:[mensaje]});
+const chat = new normalizr.schema.Entity("mensajes", {mensajes:[mensaje], autor:[autor]});
+const compresion = document.querySelector("#websocket-compresion");
+let idMensaje=0;
 
 message.addEventListener("keyup", (event) => {
   const exp = new RegExp("[a-zA-Z]+[0-9]?");
@@ -70,11 +74,19 @@ socket.on("chat:tiping", (data) => {
 
 
 socket.on("new:message",(data)=>{
-  if(socket.id === data.idSocket){
-    messages.innerHTML+=`<p class="messages-me"><span>${data.user}:</span> ${data.message}</p>`
-  }else{
-    messages.innerHTML+=`<p class="messages-other"><span>${data.user}:</span> ${data.message}</p>`
-  }
+  let comprimido = JSON.stringify(data).length;
+  const datosDesnormalizados = normalizr.denormalize(data.result, chat, data.entities);
+  let descomprimido = JSON.stringify(datosDesnormalizados).length;
+  messages.innerHTML="";
+  compresion.innerHTML =`Compresion ${((comprimido/descomprimido)*100).toFixed(2)}%`;
+  datosDesnormalizados.mensajes.forEach(elemento => {
+    if(socket.id === elemento.autor.id){
+      messages.innerHTML+=`<p class="messages-me"><span>${elemento.autor.user}:</span> ${elemento.mensaje}</p>`
+    }else{
+      messages.innerHTML+=`<p class="messages-other"><span>${elemento.autor.user}:</span> ${elemento.mensaje}</p>`
+    }
+  });
+
   
 
 });
@@ -85,8 +97,16 @@ const eventTiping = (status)=>{
 
 }
 const eventNewMessage = ()=>{
-
-  socket.emit("new:message", { user: user.value, idSocket: socket.id,message:message.value});
+  idMensaje++;
+  const objeto = {
+    id:idMensaje,
+    autor:{
+      id:socket.id,
+      user:user.value,
+    },
+    mensaje:message.value
+  };
+  socket.emit("new:message", objeto);
   message.value="";
   eventTiping("notiping");
 }

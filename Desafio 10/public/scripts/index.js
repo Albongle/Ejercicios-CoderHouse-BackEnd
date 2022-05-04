@@ -1,6 +1,7 @@
 import { getDatosFetch, postDatosFetch } from "./modules/fetch.js";
 import { renderObjetos } from "./modules/render.js";
 import { Producto } from "./modules/producto.js";
+
 const socket = io();
 const send = document.getElementById("cargar");
 const form = document.getElementById("formulario");

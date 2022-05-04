@@ -15,7 +15,7 @@ class GestorDataBase{
             this.#tabla= nombre || "tabla_default";
             await this.#database.schema.dropTableIfExists(this.#tabla);
             await this.#database.schema.createTable(this.#tabla, table=>{
-                table.increments();
+                // table.increments();
 
                 for (const key in columnas) {
                     switch(key)

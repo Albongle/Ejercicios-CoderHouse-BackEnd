@@ -310,6 +310,10 @@ html {
   cursor: pointer;
 }
 
+.container .chat-websocket .websocket-compresion {
+  font-size: 2rem;
+}
+
 .container .chat-websocket .websocket-messages {
   margin: 1rem;
   font-size: 1.6rem;
