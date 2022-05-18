@@ -1,0 +1,28 @@
+{
+  "name": "desafio-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.3.1",
+    "@types/passport": "^1.0.7",
+    "@types/passport-local": "^1.0.34",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.3",
+    "passport": "^0.5.3",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.0"
+  }
+}
