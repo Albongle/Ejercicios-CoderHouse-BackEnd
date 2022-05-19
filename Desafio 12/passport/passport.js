@@ -1,7 +1,7 @@
 const passport = require("passport");
 const {Strategy:localStrategy} = require("passport-local");
-const UsuariosDAOMongo = require("../dao/UsuariosDAOMongoDb");
-const gestorUsuario = new UsuariosDAOMongo();
+const UsuariosDAO = require("../dao/usuariosDAOMongoDb");
+const gestorUsuario = new UsuariosDAO();
 
 
 //config
