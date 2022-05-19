@@ -8,12 +8,8 @@ const mdw = require("../middlewares/middlewares");
 
 
 
-
-
-
 //middlewares
 //agreggo mdw de passport
-router.use(passport.initialize());
 router.use(cookieParse());
 router.use(session({
     store:MongoStore.create({mongoUrl:process.env.STRING_CONNECTION, mongoOptions:{useNewUrlParser:true, useUnifiedTopology:true}}),
@@ -24,6 +20,7 @@ router.use(session({
         maxAge:600000
     }
 }));
+router.use(passport.initialize());
 router.use(passport.session());
 
 //routes
